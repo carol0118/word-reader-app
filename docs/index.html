@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#ff7a18" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="apple-mobile-web-app-title" content="英语点读" />
+    <title>小朋友英语点读</title>
+    <link rel="manifest" href="./manifest.webmanifest" />
+    <link rel="icon" href="./icon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="./icon.svg" />
+    <link rel="stylesheet" href="./styles.css" />
+    <script src="https://cdn.jsdelivr.net/npm/tesseract.js@5/dist/tesseract.min.js"></script>
+  </head>
+  <body>
+    <div class="bg-shape bg-shape-a"></div>
+    <div class="bg-shape bg-shape-b"></div>
+
+    <main class="app-shell">
+      <section class="hero-card">
+        <p class="eyebrow">Word Tap</p>
+        <h1>拍一张英语图片<br />一个个点着读</h1>
+        <p class="subtitle">
+          适合三年级孩子使用。上传课本、单词卡或作业图片，系统会识别英文单词，点一下就能发音。
+        </p>
+
+        <label class="upload-card">
+          <input id="imageInput" type="file" accept="image/*" capture="environment" />
+          <span class="upload-title">上传图片</span>
+          <span class="upload-hint">支持手机拍照或本地选择</span>
+        </label>
+
+        <div class="actions">
+          <button id="recognizeBtn" class="primary-btn">开始识别</button>
+          <span id="statusText" class="status-pill">请先选择一张图片</span>
+        </div>
+        <p class="mobile-tip">
+          这是 GitHub Pages 版本，不需要后端。首次识别会稍慢，因为浏览器要加载 OCR 组件。
+        </p>
+      </section>
+
+      <section class="preview-card">
+        <div class="card-head">
+          <h2>图片预览</h2>
+          <p>字越清楚，识别越稳。</p>
+        </div>
+        <div class="preview-frame">
+          <img id="previewImage" alt="预览图片" hidden />
+          <div id="previewPlaceholder" class="placeholder">还没有图片</div>
+        </div>
+      </section>
+
+      <section class="result-card">
+        <div class="card-head">
+          <div>
+            <h2 id="resultTitle">识别结果</h2>
+            <p>点单词卡片就会播放发音。</p>
+          </div>
+          <div class="legend">本机语音</div>
+        </div>
+        <div id="wordGrid" class="word-grid">
+          <div class="empty-state">识别完成后，单词会出现在这里。</div>
+        </div>
+      </section>
+    </main>
+
+    <button id="installBtn" class="install-btn" hidden>安装到手机桌面</button>
+    <script src="./app.js" type="module"></script>
+  </body>
+</html>
