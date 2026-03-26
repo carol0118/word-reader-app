@@ -15,7 +15,13 @@ const WORD_UNITS = [
       ["quick", "快的"],
       ["go", "去"],
       ["Saturday", "星期六"],
-      ["today", "今天"],
+      ["today", "今天"]
+    ]
+  },
+  {
+    id: "unit-2",
+    label: "Unit 2",
+    words: [
       ["o'clock", "点钟"],
       ["half", "一半"],
       ["past", "过了；过去的"],
@@ -31,13 +37,7 @@ const WORD_UNITS = [
       ["hurry", "赶快"],
       ["dream", "梦"],
       ["eleven", "十一"],
-      ["twelve", "十二"]
-    ]
-  },
-  {
-    id: "unit-2",
-    label: "Unit 2",
-    words: [
+      ["twelve", "十二"],
       ["ten", "十"]
     ]
   },
