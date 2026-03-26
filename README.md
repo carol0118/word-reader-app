@@ -48,6 +48,8 @@
 
 具体步骤见 `deploy-github-pages.md`
 
+最后更新时间：2026-03-26
+
 ## 安装到手机桌面
 
 - Android Chrome
