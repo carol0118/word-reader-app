@@ -2,14 +2,15 @@
   "name": "小朋友英语点读",
   "short_name": "英语点读",
   "description": "拍照识别英语单词，点击即可播放发音，适合三年级孩子使用。",
-  "start_url": "/",
+  "start_url": "./",
+  "scope": "./",
   "display": "standalone",
   "background_color": "#fff8ec",
   "theme_color": "#ff7a18",
   "lang": "zh-CN",
   "icons": [
     {
-      "src": "/icon.svg",
+      "src": "./icon.svg",
       "sizes": "any",
       "type": "image/svg+xml",
       "purpose": "any maskable"
