@@ -19,34 +19,39 @@
 
     <main class="app-shell app-shell-library">
       <section class="hero-card hero-card-library">
-        <p class="eyebrow">Unit Reader</p>
-        <h1>按单元查单词<br />点一下就能读</h1>
-        <p class="subtitle">
-          已按 Unit 分类整理。孩子点开单词时，会直接朗读，并在下面显示拆读提示，比如
-          <span class="inline-sample">t en</span>。
+        <p id="collectionEyebrow" class="eyebrow">Unit Reader</p>
+        <h1 id="heroTitle">按单元查单词，点一下就能读</h1>
+        <p id="heroSubtitle" class="subtitle">
+          保留原来的 Unit 词库，适合快速点读、拼读和按中文意思查找单词。
         </p>
 
         <div class="search-wrap">
-          <input id="searchInput" class="search-input" type="search" placeholder="搜索单词，如 ten / breakfast" />
-          <span id="statusText" class="status-pill">请选择一个单元或直接搜索</span>
+          <input
+            id="searchInput"
+            class="search-input"
+            type="search"
+            placeholder="搜索单词，如 breakfast / 柠檬 / electricity"
+          />
+          <span id="statusText" class="status-pill">请选择内容库，再点开单词卡片开始朗读。</span>
         </div>
 
+        <div id="collectionTabs" class="collection-tabs"></div>
         <div id="unitTabs" class="unit-tabs"></div>
       </section>
 
       <section class="detail-card">
         <div class="card-head">
           <div>
-            <h2 id="detailTitle">点击右侧单词开始点读</h2>
-            <p id="detailSubtitle">会显示中文意思和拆读方式。</p>
+            <h2 id="detailTitle">点击下方单词开始点读</h2>
+            <p id="detailSubtitle">会显示中文意思和拆读提示。</p>
           </div>
           <div class="legend">本机语音</div>
         </div>
 
         <div id="detailPanel" class="detail-panel empty-detail">
-          <div class="detail-word">例如：ten</div>
+          <div class="detail-word">ten</div>
           <div class="detail-meaning">中文：十</div>
-          <div class="detail-read">拆读</div>
+          <div class="detail-read">拆读：t en</div>
           <div class="segment-row">
             <span class="segment-pill">t</span>
             <span class="segment-pill">en</span>
@@ -58,10 +63,22 @@
         <div class="card-head">
           <div>
             <h2 id="resultTitle">Unit 1</h2>
-            <p id="resultDescription">点任意单词卡片开始发音。</p>
+            <p id="resultDescription">点击任意单词卡片开始发音。</p>
           </div>
         </div>
         <div id="wordGrid" class="word-grid"></div>
+      </section>
+
+      <section id="readingSection" class="reading-card" hidden>
+        <div class="card-head reading-head">
+          <div>
+            <p class="reading-kicker">Lesson Reading</p>
+            <h2 id="readingTitle">We Eat Flowers!</h2>
+            <p id="readingMeta">Plants · Science</p>
+          </div>
+          <button id="playReadingBtn" type="button" class="reading-play-btn">朗读整篇</button>
+        </div>
+        <div id="readingBody" class="reading-body"></div>
       </section>
     </main>
 
